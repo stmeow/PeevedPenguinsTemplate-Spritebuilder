@@ -11,7 +11,7 @@
 @implementation Gameplay {
     CCPhysicsNode* _physicsNode;
     CCNode* _catapultArm;
-    CCNode *_levelNode;
+    CCNode* _levelNode;
 }
 
 -(void) didLoadFromCCB

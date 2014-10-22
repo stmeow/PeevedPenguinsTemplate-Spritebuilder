@@ -389,7 +389,7 @@
 						<key>memberVarAssignmentName</key>
 						<string>_levelNode</string>
 						<key>memberVarAssignmentType</key>
-						<integer>1</integer>
+						<integer>2</integer>
 						<key>properties</key>
 						<array>
 							<dict>
