@@ -20,6 +20,8 @@
     self.userInteractionEnabled = YES;
     CCScene *level = [CCBReader loadAsScene:@"Level/Level1"];
     [_levelNode addChild:level];
+    // visualize physics bodies & joints
+    _physicsNode.debugDraw = TRUE;
 }
 
 -(void) touchBegan:(UITouch *)touch withEvent:(UIEvent *)event
