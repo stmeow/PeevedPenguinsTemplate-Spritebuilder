@@ -14,6 +14,8 @@
     CCNode* _levelNode;
     CCNode* _contentNode;
     CCNode* _pullbackNode;
+    CCNode *_mouseJointNode;
+    CCPhysicsJoint *_mouseJoint;
 }
 
 -(void) didLoadFromCCB
@@ -24,11 +26,42 @@
     // visualize physics bodies & joints
     //_physicsNode.debugDraw = TRUE;
     _pullbackNode.physicsBody.collisionMask = @[];
+    _mouseJointNode.physicsBody.collisionMask = @[];
 }
 
 -(void) touchBegan:(UITouch *)touch withEvent:(UIEvent *)event
 {
-    [self launchPenguin];
+    //[self launchPenguin];
+    CGPoint touchPosition = [touch locationInNode:_contentNode];
+    if (CGRectContainsPoint([_catapultArm boundingBox], touchPosition)) {
+        _mouseJointNode.position = touchPosition;
+        _mouseJoint = [CCPhysicsJoint connectedSpringJointWithBodyA:_mouseJointNode.physicsBody bodyB:_catapultArm.physicsBody anchorA:ccp(0, 0) anchorB:ccp(34, 138) restLength:0.f stiffness:3000.f damping:150.f];
+    }
+}
+
+-(void) touchMoved:(UITouch *)touch withEvent:(UIEvent *)event
+{
+    CGPoint touchPosition = [touch locationInNode:_contentNode];
+    _mouseJointNode.position = touchPosition;
+}
+
+-(void) touchEnded:(UITouch *)touch withEvent:(UIEvent *)event
+{
+    [self releaseCatapult];
+}
+
+-(void) touchCancelled:(UITouch *)touch withEvent:(UIEvent *)event
+{
+    [self releaseCatapult];
+}
+
+- (void)releaseCatapult {
+    if (_mouseJoint != nil)
+    {
+        // releases the joint and lets the catapult snap back
+        [_mouseJoint invalidate];
+        _mouseJoint = nil;
+    }
 }
 
 -(void) launchPenguin
