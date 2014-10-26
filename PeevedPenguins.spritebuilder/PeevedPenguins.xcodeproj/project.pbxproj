@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		554371E819FC7FA10022D4CA /* WaitingPenguin.m in Sources */ = {isa = PBXBuildFile; fileRef = 554371E719FC7FA10022D4CA /* WaitingPenguin.m */; };
 		558EAD8319F73F2A0072E188 /* Gameplay.m in Sources */ = {isa = PBXBuildFile; fileRef = 558EAD8219F73F2A0072E188 /* Gameplay.m */; };
 		55C6371B19F7144E00FDC452 /* Penguin.m in Sources */ = {isa = PBXBuildFile; fileRef = 55C6371A19F7144E00FDC452 /* Penguin.m */; };
 		55C6371F19F7145900FDC452 /* Seal.m in Sources */ = {isa = PBXBuildFile; fileRef = 55C6371E19F7145900FDC452 /* Seal.m */; };
@@ -59,6 +60,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		554371E619FC7FA10022D4CA /* WaitingPenguin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WaitingPenguin.h; sourceTree = "<group>"; };
+		554371E719FC7FA10022D4CA /* WaitingPenguin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WaitingPenguin.m; sourceTree = "<group>"; };
 		558EAD8119F73F2A0072E188 /* Gameplay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Gameplay.h; sourceTree = "<group>"; };
 		558EAD8219F73F2A0072E188 /* Gameplay.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Gameplay.m; sourceTree = "<group>"; };
 		55C6371919F7144E00FDC452 /* Penguin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Penguin.h; sourceTree = "<group>"; };
@@ -144,6 +147,8 @@
 				B7378993180767190076A88C /* MainScene.m */,
 				558EAD8119F73F2A0072E188 /* Gameplay.h */,
 				558EAD8219F73F2A0072E188 /* Gameplay.m */,
+				554371E619FC7FA10022D4CA /* WaitingPenguin.h */,
+				554371E719FC7FA10022D4CA /* WaitingPenguin.m */,
 			);
 			name = Source;
 			sourceTree = "<group>";
@@ -357,6 +362,7 @@
 			files = (
 				55C6371F19F7145900FDC452 /* Seal.m in Sources */,
 				B737893F1807617C0076A88C /* AppDelegate.m in Sources */,
+				554371E819FC7FA10022D4CA /* WaitingPenguin.m in Sources */,
 				B7378994180767190076A88C /* MainScene.m in Sources */,
 				55C6371B19F7144E00FDC452 /* Penguin.m in Sources */,
 				B73789871807631A0076A88C /* main.m in Sources */,
